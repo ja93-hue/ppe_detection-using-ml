@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live PPE Detection</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            text-align: center;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        #video-container {
+            margin-top: 20px;
+            border: 2px solid #ccc;
+            border-radius: 8px;
+            overflow: hidden;
+            display: inline-block;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        #video-stream {
+            width: 100%;
+            max-width: 800px;
+            height: auto;
+            display: block;
+        }
+        p {
+            color: #555;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Live PPE Detection from Webcam</h1>
+    <div id="video-container">
+        <img id="video-stream" src="{{ url_for('video_feed') }}" alt="Live Video Feed">
+    </div>
+    <p>Press 'Ctrl+C' in the terminal to stop the service.</p>
+</body>
+</html>
